@@ -1,0 +1,15 @@
+###############################################################################
+# Fleet Manifest: cert-manager
+###############################################################################
+defaultNamespace: cert-manager
+
+# Helm Installation
+helm:
+  releaseName: cert-manager
+  repo: oci://quay.io/jetstack/charts
+  chart: cert-manager
+  version: v1.18.2
+
+  # Path to any values files that need to be passed to helm during install.
+  valuesFiles:
+    - cert-manager-values.yaml
